@@ -1,0 +1,17 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**                                    CONNECTION A UNE BASE DE DONNEES MYSQL                                         **/
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+const mysql = require('mysql');
+
+var connect = mysql.createConnection({
+    host : 'localhost',
+    user : 'root',
+    password : ''
+});
+
+
+connect.query('USE menu_pizza');
+
+module.exports = connect;
